@@ -1,5 +1,0 @@
-Que.1 Does ANSI recognize the data type DATE?
-Ans:  Yes, ANSI recognizes the data type DATE. It is commonly used to store dates in databases.
-
-Que.2 Which subdivision of SQL is used to insert values in tables?
-Ans:  Insert Data is used to insert values in tables.
