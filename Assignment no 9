@@ -54,19 +54,18 @@ KD4_Jyoti_83551>select Cname, SALESPEOPLE.Sname, Comm*100 "commision" from CUSTO
 +----------+--------+-----------+
 
 
-Que.4 Ans:KD4_Jyoti_83551>select Sname, Cname, Rating, Comm*Amt "COMMISION" from ORDERS, CUSTOMERS, SALESPEOPLE where ORDERS.Snum=CUSTOMERS.Snum and SALESPEOPLE.Snum=CUSTOMERS.Snum and Rating>100;
+Que.4 Ans:
+KD4_Jyoti_83551>select Sname, Cname, Rating, Comm*Amt "COMMISION" from ORDERS, CUSTOMERS, SALESPEOPLE where ORDERS.Cnum=CUSTOMERS.Cnum and ORDERS.Snum=SALESPEOPLE.Snum having Rating>100 order by Onum;
 +---------+----------+--------+-----------+
 | Sname   | Cname    | Rating | COMMISION |
 +---------+----------+--------+-----------+
 | Rifkin  | Cisneros |    300 |      2.80 |
 | Serres  | Liu      |    200 |    670.86 |
-| Serres  | Grass    |    300 |    670.86 |
 | Rifkin  | Cisneros |    300 |    164.72 |
-| Axelrod | Giovanni |    200 |    171.32 |
-| Serres  | Liu      |    200 |      9.85 |
 | Serres  | Grass    |    300 |      9.85 |
-| Serres  | Liu      |    200 |    170.29 |
+| Axelrod | Giovanni |    200 |    171.32 |
 | Serres  | Grass    |    300 |    170.29 |
 +---------+----------+--------+-----------+
-9 rows in set (0.00 sec)
+6 rows in set (0.00 sec)
+
 

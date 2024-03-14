@@ -1,3 +1,10 @@
+Q1) write a querry that will give you all orders for more than Rs 1000?
+ANS:[1] select * from ORDERS where AMT>1000;
+    [2] select AMT from orders where AMT>1000;
+    
+Q2)  write a querry that will give you the names and cities of all salespeople in london with a commision above 0.10?
+ANS:[1] select sname,city from SALESPEOPLE where city='london' and comm>0.10;
+
 Que.3 Ans: KD4_Jyoti_83551>select * from CUSTOMERS where RATING<=100 and city!='Rome';
 +------+---------+--------+--------+------+
 | Cnum | Cname   | City   | Rating | Snum |

@@ -1,0 +1,29 @@
+Que.1
+Ans:KD4_Jyoti_83551>select Onum "ALL ORDERS", Cnum from ORDERS where Cnum= (select Cnum from CUSTOMERS where Cname='Cisneros');
++------------+------+
+| ALL ORDERS | Cnum |
++------------+------+
+|       3001 | 2008 |
+|       3006 | 2008 |
++------------+------+
+2 rows in set (0.00 sec)
+
+Que.2
+Ans:KD4_Jyoti_83551>select Cname, Rating from CUSTOMERS where Cnum IN(select Cnum from ORDERS where Amt > (select avg(Amt) from ORDERS));
++---------+--------+
+| Cname   | Rating |
++---------+--------+
+| Liu     |    200 |
+| Clemens |    100 |
++---------+--------+
+2 rows in set (0.01 sec)
+
+Que.3
+Ans:KD4_Jyoti_83551>select sum(Amt) from ORDERS group by Snum having sum(Amt)>(select max(Amt) from ORDERS);
++----------+
+| sum(Amt) |
++----------+
+| 15382.07 |
++----------+
+1 row in set (0.00 sec)
+
