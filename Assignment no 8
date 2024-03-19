@@ -1,0 +1,60 @@
+Que.1
+Ans:KD4_Jyoti_83551>select Onum, Snum, Amt*0.12 from ORDERS;
++------+-------+----------+
+| Onum | Snum  | Amt*0.12 |
++------+-------+----------+
+| 3001 |  1007 |     2.24 |
+| 3003 |  1001 |    92.06 |
+| 3002 | 11004 |   228.01 |
+| 3005 |  1002 |   619.25 |
+| 3006 |  1007 |   131.78 |
+| 3009 |  1003 |   205.59 |
+| 3007 |  1002 |     9.09 |
+| 3008 |  1001 |   566.76 |
+| 3010 |  1002 |   157.19 |
+| 3011 |  1001 |  1187.03 |
++------+-------+----------+
+10 rows in set (0.00 sec)
+
+
+Que.2
+Ans:KD4_Jyoti_83551>select City, max(Rating)'HIGHEST RATING' from CUSTOMERS group by City;
++----------+----------------+
+| City     | HIGHEST RATING |
++----------+----------------+
+| London   |            100 |
+| Rome     |            200 |
+| San Jose |            300 |
+| Berlin   |            300 |
++----------+----------------+
+4 rows in set (0.00 sec)
+
+
+Que.3
+Ans:KD4_Jyoti_83551>select Rating, Cname, Cnum from CUSTOMERS order by 1 desc;
++--------+----------+------+
+| Rating | Cname    | Cnum |
++--------+----------+------+
+|    300 | Grass    | 2004 |
+|    300 | Cisneros | 2008 |
+|    200 | Giovanni | 2002 |
+|    200 | Liu      | 2003 |
+|    100 | Hoffman  | 2001 |
+|    100 | Clemens  | 2006 |
+|    100 | Pereira  | 2007 |
++--------+----------+------+
+7 rows in set (0.00 sec)
+
+Que.4
+Ans:KD4_Jyoti_83551>select Odate, count(Odate)'TOTAL ORDER' from ORDERS group by Odate order by 1 desc;
++------------+-------------+
+| Odate      | TOTAL ORDER |
++------------+-------------+
+| 1990-10-06 |           2 |
+| 1990-10-05 |           1 |
+| 1990-10-04 |           2 |
+| 1990-10-03 |           5 |
++------------+-------------+
+4 rows in set (0.00 sec)
+
+

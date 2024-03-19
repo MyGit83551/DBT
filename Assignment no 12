@@ -20,7 +20,7 @@ Ans: KD4_Jyoti_83551>select * from SALESPEOPLE  where (Snum,City) not in(select 
 +------+---------+-----------+------+
 
 Que.3
-Ans: KD4_Jyoti_83551>select * from ORDERS where Amt >any(select Snum from CUSTOMERS where City ='London');
+Ans: KD4_Jyoti_83551>select * from ORDERS where Amt >any(select Amt from CUSTOMERS where City ='London');
 +------+---------+------------+------+------+
 | Onum | Amt     | Odate      | Cnum | Snum |
 +------+---------+------------+------+------+
